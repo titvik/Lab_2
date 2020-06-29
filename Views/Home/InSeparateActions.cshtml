@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "ManualWithSeparateHandlers";
+}
+
+<h2>ManualWithSeparateHandlers</h2>
+
+@using(Html.BeginForm("InSeparateActions", "Home", FormMethod.Post))
+{
+
+    @Html.TextBox("first-value", ""); <br>
+
+    @Html.DropDownList("op", new SelectList(new string[] {"+","-", "*","/"})) <br>
+
+    @Html.TextBox("second-value", ""); <br>
+
+    <button type="submit">Submit</button>
+
+}

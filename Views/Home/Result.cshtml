@@ -1,0 +1,17 @@
+
+@{
+    ViewData["Title"] = "Result";
+}
+
+<h2> Result </h2>
+
+@Model.FirstValue @Model.Op @Model.SecondValue = 
+
+@if (@Model.DivisionByZeroException)
+{
+    <text>Division by Zero</text>
+}
+else {
+    @Model.result
+}
+

@@ -1,0 +1,17 @@
+@{
+    ViewData["Title"] = "ModelBindingInParameters";
+}
+
+<h2>ModelBindingInParameters</h2>
+
+@model CalcModel;
+
+@{
+    var list = new SelectList(new string[] {"+","-", "*","/"});
+}
+<form asp-action="MBwithSeparateModel" asp-controller="Home">
+    <input asp-for="FirstValue" /> <br>
+    <select asp-for="Op" asp-items="list"></select> <br>
+    <input asp-for="SecondValue" /> <br>
+    <button type="submit">Submit</button> 
+</form>
